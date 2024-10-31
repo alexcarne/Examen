@@ -8,6 +8,7 @@ function inicializar() {
     añadirTask();
   });
 }
+
 function añadirstyle(btn) {
   let btnclass = "btn-add";
   let divclasses = [
@@ -25,6 +26,7 @@ function añadirstyle(btn) {
   });
   btn.classList.add(btnclass);
 }
+
 function añadirTask() {
   let divtareas = document.getElementsByClassName("li-container")[0];
   let ul = document.querySelector("ul");
@@ -58,6 +60,7 @@ function añadirTask() {
     spancounter.textContent = ++counter;
   }
 }
+
 function eleminarTask(li, ul, spancounter, textTareas) {
   ul.removeChild(li);
   spancounter.textContent = --counter;
@@ -65,6 +68,7 @@ function eleminarTask(li, ul, spancounter, textTareas) {
     textTareas.removeAttribute("hidden");
   }
 }
+
 function tacharTarea(span) {
   span.style.textDecoration == "line-through"
     ? (span.style.textDecoration = "")
