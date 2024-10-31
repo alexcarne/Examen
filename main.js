@@ -1,14 +1,14 @@
-let btn = document.querySelector("button");
 let counter = 0;
 
 function inicializar() {
-  añadirstyle();
+  let btn = document.querySelector("button");
+  añadirstyle(btn);
   btn.addEventListener("click", function (event) {
     event.preventDefault();
     añadirTask();
   });
 }
-function añadirstyle() {
+function añadirstyle(btn) {
   let btnclass = "btn-add";
   let divclasses = [
     "container",
