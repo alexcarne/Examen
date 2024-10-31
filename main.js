@@ -43,6 +43,9 @@ function añadirTask() {
   btntask.addEventListener("click", () => {
     eleminarTask(li, ul, spancounter, textTareas);
   });
+  p.addEventListener("click", () => {
+    tacharTarea(span);
+  });
   if (input.value) {
     p.appendChild(span);
     li.appendChild(p);
@@ -56,7 +59,6 @@ function añadirTask() {
   }
 }
 function eleminarTask(li, ul, spancounter, textTareas) {
-  console.log("eliminar");
   ul.removeChild(li);
   spancounter.textContent = --counter;
   if (counter <= 0) {
@@ -64,7 +66,9 @@ function eleminarTask(li, ul, spancounter, textTareas) {
   }
 }
 function tacharTarea(span) {
-    
+  span.style.textDecoration == "line-through"
+    ? (span.style.textDecoration = "")
+    : (span.style.textDecoration = "line-through");
 }
 
 document.addEventListener("DOMContentLoaded", inicializar);
